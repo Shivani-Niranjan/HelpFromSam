@@ -17,19 +17,16 @@ Output 2:
 2
 '''
 
-def HelpFromSam(target):
-    score = 1
-    help = 0
+def HelpFromSam_1(target):
+    help = 1
 
-    while score < target:
-        if score * 2 <= target:
-            score *= 2
-        else:
-            score += 1
+    while (target > 1):
+        if target % 2 == 1:
             help += 1
-
-    return help+1
+            target -= 1
+        target = target / 2
+    return (help)
 
 target = int(input())
-print(HelpFromSam(target))  
+print(HelpFromSam_1(target))    
 
